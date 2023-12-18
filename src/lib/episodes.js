@@ -5,7 +5,7 @@ export async function getAllEpisodes() {
   let FeedSchema = object({
     items: array(
       object({
-        id: number(),
+        id: string(),
         title: string(),
         published: number(),
         description: string(),
@@ -20,13 +20,13 @@ export async function getAllEpisodes() {
     ),
   })
 
-  let feed = await parseFeed('https://their-side-feed.vercel.app/api/feed')
+  let feed = await parseFeed('http://rss.castbox.fm/everest/b10ffeb604b44a29b28fceb603bd2908.xml')
   let items = parse(FeedSchema, feed).items
 
   let episodes = items.map(
     ({ id, title, description, content, enclosures, published }) => ({
       id,
-      title: `${id}: ${title}`,
+      title,
       published: new Date(published),
       description,
       content,
