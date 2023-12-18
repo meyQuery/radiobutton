@@ -15,7 +15,7 @@ export function AboutSection(props) {
           colors={['fill-violet-300', 'fill-pink-300']}
           className="h-2.5 w-2.5"
         />
-        <span className="ms-2.5">About</span>
+        <span className="ms-2.5">درباره ما</span>
       </h2>
       <p
         className={clsx(
@@ -23,11 +23,7 @@ export function AboutSection(props) {
           !isExpanded && 'lg:line-clamp-4',
         )}
       >
-        In this show, Eric and Wes dig deep to get to the facts with guests who
-        have been labeled villains by a society quick to judge, without actually
-        getting the full story. Tune in every Thursday to get to the truth with
-        another misunderstood outcast as they share the missing context in their
-        tragic tale.
+        این پادکست از دل گفت‌وگوهای روزمره ما درباره محصولات، رویدادها و آدم‌های فعال در حوزه‌ی IT شکل گرفته. در فصل اول سراغ افرادی می‌ریم که در زمینه کاری‌شون موفق بودن و درباره روزهایی گپ می‌زنیم که بینش و شخصیت کاری‌شون در حال شکل‌گیری بوده. از اولین مواجهه با کامپیوتر تا روزی که اولین پیشنهاد کاری رو دریافت کردند.
       </p>
       {!isExpanded && (
         <button
@@ -35,7 +31,7 @@ export function AboutSection(props) {
           className="mt-2 hidden text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 lg:inline-block"
           onClick={() => setIsExpanded(true)}
         >
-          Show more
+          بیش‌تر
         </button>
       )}
     </section>
