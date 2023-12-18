@@ -40,7 +40,7 @@ function EpisodeEntry({ episode }) {
             className="mt-2 text-lg font-bold text-slate-900"
             dir="ltr"
           >
-            <Link href={`/${episode.id}`}>{episode.title}</Link>
+            <div>{episode.title}</div>
           </h2>
           <FormattedDate
             date={date}
@@ -56,29 +56,16 @@ function EpisodeEntry({ episode }) {
               playing={
                 <>
                   <PauseIcon className="h-2.5 w-2.5 fill-current" />
-                  <span aria-hidden="true">Listen</span>
+                  <span aria-hidden="true">شنیدن</span>
                 </>
               }
               paused={
                 <>
                   <PlayIcon className="h-2.5 w-2.5 fill-current" />
-                  <span aria-hidden="true">Listen</span>
+                  <span aria-hidden="true">شنیدن</span>
                 </>
               }
             />
-            <span
-              aria-hidden="true"
-              className="text-sm font-bold text-slate-400"
-            >
-              /
-            </span>
-            <Link
-              href={`/${episode.id}`}
-              className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-              aria-label={`Show notes for episode ${episode.title}`}
-            >
-              Show notes
-            </Link>
           </div>
         </div>
       </Container>

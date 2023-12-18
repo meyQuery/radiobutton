@@ -38,7 +38,7 @@ function Thumb(props) {
     <div
       className="absolute top-1/2 -translate-x-1/2"
       style={{
-        start: `${state.getThumbPercent(index) * 100}%`,
+        left: `${state.getThumbPercent(index) * 100}%`,
       }}
     >
       <div
