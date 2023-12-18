@@ -62,8 +62,8 @@ export default function MainLayout({ children }) {
 
   return (
     <AudioProvider>
-      <header className="bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
-        <div className="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
+      <header className="bg-slate-50 lg:fixed lg:inset-y-0 lg:start-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
+        <div dir="ltr" className="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
           <span className="font-mono text-slate-500">Hosted by</span>
           <span className="mt-6 flex gap-6 font-bold text-slate-900">
             {hosts.map((host, hostIndex) => (
@@ -93,7 +93,7 @@ export default function MainLayout({ children }) {
             />
             <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10 sm:rounded-xl lg:rounded-2xl" />
           </Link>
-          <div className="mt-10 text-center lg:mt-12 lg:text-left">
+          <div className="mt-10 text-center lg:mt-12 lg:text-start">
             <p className="text-xl font-bold text-slate-900">
               <Link href="/">Their Side</Link>
             </p>
@@ -109,7 +109,7 @@ export default function MainLayout({ children }) {
                 colors={['fill-indigo-300', 'fill-blue-300']}
                 className="h-2.5 w-2.5"
               />
-              <span className="ml-2.5">Listen</span>
+              <span className="ms-2.5">Listen</span>
             </h2>
             <div className="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden" />
             <ul
@@ -129,7 +129,7 @@ export default function MainLayout({ children }) {
                     aria-label={label}
                   >
                     <Icon className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600" />
-                    <span className="hidden sm:ml-3 sm:block">{label}</span>
+                    <span className="hidden sm:ms-3 sm:block">{label}</span>
                   </Link>
                 </li>
               ))}
@@ -137,8 +137,8 @@ export default function MainLayout({ children }) {
           </section>
         </div>
       </header>
-      <main className="border-t border-slate-200 lg:relative lg:mb-28 lg:ml-112 lg:border-t-0 xl:ml-120">
-        <Waveform className="absolute left-0 top-0 h-20 w-full" />
+      <main className="border-t border-slate-200 lg:relative lg:mb-28 lg:ms-112 lg:border-t-0 xl:ms-120">
+        <Waveform className="absolute start-0 top-0 h-20 w-full" />
         <div className="relative">{children}</div>
       </main>
       <footer className="border-t border-slate-200 bg-slate-50 py-10 pb-40 sm:py-16 sm:pb-32 lg:hidden">
@@ -146,7 +146,7 @@ export default function MainLayout({ children }) {
           <AboutSection />
           <h2 className="mt-8 flex items-center font-mono text-sm font-medium leading-7 text-slate-900">
             <PersonIcon className="h-3 w-auto fill-slate-300" />
-            <span className="ml-2.5">Hosted by</span>
+            <span className="ms-2.5">Hosted by</span>
           </h2>
           <div className="mt-2 flex gap-6 text-sm font-bold leading-7 text-slate-900">
             {hosts.map((host, hostIndex) => (
@@ -162,7 +162,7 @@ export default function MainLayout({ children }) {
           </div>
         </div>
       </footer>
-      <div className="fixed inset-x-0 bottom-0 z-10 lg:left-112 xl:left-120">
+      <div className="fixed inset-x-0 bottom-0 z-10 lg:start-112 xl:start-120">
         <AudioPlayer />
       </div>
     </AudioProvider>
