@@ -6,8 +6,6 @@ import clsx from 'clsx'
 import { TinyWaveFormIcon } from '@/components/TinyWaveFormIcon'
 
 export function AboutSection(props) {
-  let [isExpanded, setIsExpanded] = useState(false)
-
   return (
     <section {...props}>
       <h2 className="flex items-center font-mono text-sm font-medium leading-7 text-slate-900">
@@ -20,20 +18,10 @@ export function AboutSection(props) {
       <p
         className={clsx(
           'mt-2 text-base leading-7 text-slate-700',
-          !isExpanded && 'lg:line-clamp-4',
         )}
       >
         این پادکست از دل گفت‌وگوهای روزمره ما درباره محصولات، رویدادها و آدم‌های فعال در حوزه‌ی IT شکل گرفته. در فصل اول سراغ افرادی می‌ریم که در زمینه کاری‌شون موفق بودن و درباره روزهایی گپ می‌زنیم که بینش و شخصیت کاری‌شون در حال شکل‌گیری بوده. از اولین مواجهه با کامپیوتر تا روزی که اولین پیشنهاد کاری رو دریافت کردند.
       </p>
-      {!isExpanded && (
-        <button
-          type="button"
-          className="mt-2 hidden text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 lg:inline-block"
-          onClick={() => setIsExpanded(true)}
-        >
-          بیش‌تر
-        </button>
-      )}
     </section>
   )
 }
