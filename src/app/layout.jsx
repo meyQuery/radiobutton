@@ -1,5 +1,23 @@
 import '@/styles/tailwind.css'
 
+import localFont from '@next/font/local'
+
+const anjoman = localFont({
+  src: [
+    {
+      path: '../fonts/Anjoman/woff/AnjomanMax-Regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/Anjoman/woff/AnjomanMax-SemiBold.woff',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+  variable: "--font-anjoman",
+})
+
 export const metadata = {
   title: {
     template: '%s | رادیو باتن',
@@ -13,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl" className="h-full bg-white antialiased">
-      <body className="flex min-h-full">
+      <body className={`flex min-h-full ${anjoman.className}`}>
         <div className="w-full cursor-default">{children}</div>
       </body>
     </html>
