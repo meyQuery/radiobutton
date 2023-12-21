@@ -44,7 +44,7 @@ function EpisodeEntry({ episode }) {
           </h2>
           <FormattedDate
             date={date}
-            className="order-first font-mono text-sm leading-7 text-slate-500"
+            className="order-first text-sm leading-7 text-slate-500"
           />
           <p className="mt-1 text-base leading-7 text-slate-700">
             {episode.description}

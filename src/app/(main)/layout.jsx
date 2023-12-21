@@ -64,18 +64,17 @@ export default function MainLayout({ children }) {
     <AudioProvider>
       <header className="bg-slate-50 lg:fixed lg:inset-y-0 lg:start-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
         <div dir="ltr" className="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
-          <span className="font-mono text-slate-500">Hosted by</span>
+          <span className="text-slate-500">Hosted by</span>
           <span className="mt-6 flex gap-6 font-bold text-slate-900">
-            {hosts.map((host, hostIndex) => (
-              <Fragment key={host}>
-                {hostIndex !== 0 && (
-                  <span aria-hidden="true" className="text-slate-400">
-                    /
-                  </span>
-                )}
-                {host}
-              </Fragment>
-            ))}
+            <a href="https://bento.me/meyquery" target='_blank'>
+              Meysam Karimi
+            </a>
+            <span aria-hidden="true" className="text-slate-400">
+              /
+            </span>
+            <a href="https://mnakhli.ir/" target='_blank'>
+              Mohammad Ali Nakhli
+            </a>
           </span>
         </div>
         <div className="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:px-8 lg:py-12 xl:px-12">
@@ -103,17 +102,9 @@ export default function MainLayout({ children }) {
           </div>
           <AboutSection className="mt-12 hidden lg:block" />
           <section className="mt-10 lg:mt-12">
-            <h2 className="sr-only flex items-center font-mono text-sm font-medium leading-7 text-slate-900 lg:not-sr-only">
-              <TinyWaveFormIcon
-                colors={['fill-indigo-300', 'fill-blue-300']}
-                className="h-2.5 w-2.5"
-              />
-              <span className="ms-2.5">Listen</span>
-            </h2>
-            <div className="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden" />
             <ul
               role="list"
-              className="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4"
+              className="flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4"
             >
               {[
                 ['Spotify', SpotifyIcon],
@@ -143,21 +134,20 @@ export default function MainLayout({ children }) {
       <footer className="border-t border-slate-200 bg-slate-50 py-10 pb-40 sm:py-16 sm:pb-32 lg:hidden">
         <div className="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4">
           <AboutSection />
-          <h2 className="mt-8 flex items-center font-mono text-sm font-medium leading-7 text-slate-900">
+          <h2 dir='ltr' className="mt-8 flex items-center text-sm font-medium leading-7 text-slate-900">
             <PersonIcon className="h-3 w-auto fill-slate-300" />
             <span className="ms-2.5">Hosted by</span>
           </h2>
-          <div className="mt-2 flex gap-6 text-sm font-bold leading-7 text-slate-900">
-            {hosts.map((host, hostIndex) => (
-              <Fragment key={host}>
-                {hostIndex !== 0 && (
-                  <span aria-hidden="true" className="text-slate-400">
-                    /
-                  </span>
-                )}
-                {host}
-              </Fragment>
-            ))}
+          <div dir='ltr' className="mt-2 flex gap-6 text-sm font-bold leading-7 text-slate-900">
+            <a href="https://bento.me/meyquery" target='_blank'>
+              Meysam Karimi
+            </a>
+            <span aria-hidden="true" className="text-slate-400">
+              /
+            </span>
+            <a href="https://mnakhli.ir/" target='_blank'>
+              Mohammad Ali Nakhli
+            </a>
           </div>
         </div>
       </footer>
