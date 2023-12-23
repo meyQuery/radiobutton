@@ -37,7 +37,7 @@ function EpisodeEntry({ episode }) {
         <div className="flex flex-col items-start">
           <h2
             id={`episode-${episode.id}-title`}
-            className="mt-2 text-xl font-semibold text-slate-900"
+            className="mt-2 text-xl font-bold text-slate-900"
             dir="ltr"
           >
             <div>{episode.title}</div>
@@ -46,11 +46,11 @@ function EpisodeEntry({ episode }) {
             date={date}
             className="order-first text-sm leading-7 text-slate-500"
           />
-          <p className="mt-1 text-base leading-relaxed text-slate-700" dangerouslySetInnerHTML={{ __html: episode.description }} ></p>
+          <p className="mt-1 text-base leading-relaxed text-slate-700" dangerouslySetInnerHTML={{ __html: episode.description }}></p>
           <div className="mt-4 flex items-center gap-4">
             <EpisodePlayButton
               episode={episode}
-              className="flex items-center gap-x-3 text-sm font-semibold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
+              className="flex items-center gap-x-3 text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
               playing={
                 <>
                   <PauseIcon className="h-2.5 w-2.5 fill-current" />

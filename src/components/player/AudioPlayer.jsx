@@ -48,7 +48,7 @@ export function AudioPlayer() {
       <div className="mb-[env(safe-area-inset-bottom)] flex flex-1 flex-col gap-3 overflow-hidden p-1">
         <Link
           href={`/${player.episode.id}`}
-          className="truncate text-center text-sm font-semibold leading-6 md:text-left"
+          className="truncate text-center text-sm font-bold leading-6 md:text-left"
           title={player.episode.title}
         >
           {player.episode.title}

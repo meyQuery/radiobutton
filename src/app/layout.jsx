@@ -10,8 +10,8 @@ const anjoman = localFont({
       style: 'normal',
     },
     {
-      path: '../fonts/Anjoman/woff/AnjomanMax-SemiBold.woff',
-      weight: '600',
+      path: '../fonts/Anjoman/woff/AnjomanMax-Bold.woff',
+      weight: '700',
       style: 'normal',
     },
   ],

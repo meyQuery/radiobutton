@@ -57,7 +57,7 @@ export default function MainLayout({ children }) {
       <header className="bg-slate-50 lg:fixed lg:inset-y-0 lg:start-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
         <div dir="ltr" className="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
           <span className="text-slate-500">Hosted by</span>
-          <span className="mt-6 flex gap-6 font-semibold text-slate-900">
+          <span className="mt-6 flex gap-6 font-bold text-slate-900">
             <a href="https://bento.me/meyquery" target='_blank' className='hover:text-pink-700 active:text-pink-900'>
               Meysam Karimi
             </a>
@@ -85,7 +85,7 @@ export default function MainLayout({ children }) {
             <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10 sm:rounded-xl lg:rounded-2xl" />
           </Link>
           <div className="mt-10 text-center lg:mt-12 lg:text-start">
-            <p className="text-xl font-semibold text-slate-900">
+            <p className="text-xl font-bold text-slate-900">
               <Link href="/">رادیو باتن</Link>
             </p>
             <p className="mt-3 text-lg font-medium leading-8 text-slate-700">
@@ -99,16 +99,17 @@ export default function MainLayout({ children }) {
               className="flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4"
             >
               {[
-                ['Castbox', CastboxIcon],
-                ['Apple Podcast', ApplePodcastIcon],
-                ['Youtube', YoutubeIcon],
-                ['Google Podcasts', GooglePodcastsIcon],
-              ].map(([label, Icon]) => (
+                ['Castbox', CastboxIcon, 'https://castbox.fm/channel/id5417701'],
+                ['Apple Podcast', ApplePodcastIcon, 'https://podcasts.apple.com/us/podcast/id1721689534'],
+                ['Youtube', YoutubeIcon, 'https://www.youtube.com/@RadioButton_ir'],
+                ['Google Podcasts', GooglePodcastsIcon, 'https://podcasts.google.com/feed/aHR0cDovL3Jzcy5jYXN0Ym94LmZtL2V2ZXJlc3QvYjEwZmZlYjYwNGI0NGEyOWIyOGZjZWI2MDNiZDI5MDgueG1s?sa=X&ved=2ahUKEwjqz9P-3KWDAxVEYPEDHeneBG4Q9sEGegQIARAD'],
+              ].map(([label, Icon, href]) => (
                 <li key={label} className="flex">
                   <Link
-                    href="/"
+                    href={href}
                     className="group flex items-center"
                     aria-label={label}
+                    target='_blank'
                   >
                     <Icon className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600" />
                     <span className="hidden sm:ms-3 sm:block">{label}</span>
@@ -130,7 +131,7 @@ export default function MainLayout({ children }) {
             <PersonIcon className="h-3 w-auto fill-slate-300" />
             <span className="ms-2.5">Hosted by</span>
           </h2>
-          <div dir='ltr' className="mt-2 flex gap-6 text-sm font-semibold leading-7 text-slate-900">
+          <div dir='ltr' className="mt-2 flex gap-6 text-sm font-bold leading-7 text-slate-900">
             <a href="https://bento.me/meyquery" target='_blank'>
               Meysam Karimi
             </a>
