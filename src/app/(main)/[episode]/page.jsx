@@ -47,7 +47,7 @@ export default async function Episode({ params }) {
               }
             />
             <div className="flex flex-col">
-              <h1 className="mt-2 text-4xl font-bold text-slate-900">
+              <h1 className="mt-2 text-4xl font-semibold text-slate-900">
                 {episode.title}
               </h1>
               <FormattedDate
